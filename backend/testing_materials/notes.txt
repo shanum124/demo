@@ -1,0 +1,19 @@
+Operating Systems Revision Notes: Process Scheduling & Deadlocks
+
+1. Process Scheduling Summary
+- First-Come, First-Served (FCFS): Non-preemptive, suffers from Convoy Effect.
+- Shortest Job First (SJF): Optimal average waiting time. Can be preemptive (SRTF).
+- Round Robin (RR): Designed for time-sharing systems. Time quantum size is critical.
+- Priority Scheduling: Suffers from Starvation (indefinite blocking). Solution: Aging.
+
+2. Synchronization & Deadlock Prevention
+- Mutual Exclusion: Only one process can use a resource at a time.
+- Hold and Wait: A process holding resources can request new ones.
+- No Preemption: Resources cannot be forcibly taken from a process.
+- Circular Wait: A closed chain of processes exists where each process holds resources needed by the next.
+
+Banker's Algorithm (Deadlock Avoidance):
+- Checks if resource allocation keeps system in a "Safe State".
+- Utilizes Max, Allocation, Available, and Need matrices.
+- Need = Max - Allocation.
+- Safe sequence is found if all processes can complete one by one with available resources.

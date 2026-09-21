@@ -1,0 +1,18 @@
+Operating Systems Final Exam - Previous Year Paper (2025)
+
+Question 1: Process Scheduling (10 marks)
+Consider the following processes with their CPU Burst times:
+- P1: Burst = 10ms, Arrival = 0ms
+- P2: Burst = 5ms, Arrival = 1ms
+- P3: Burst = 8ms, Arrival = 2ms
+Draw the Gantt Chart and calculate average waiting time using Preemptive Shortest Remaining Time First (SRTF) scheduling.
+
+Question 2: Banker's Algorithm (10 marks)
+Explain how the Banker's Algorithm detects whether a request can be safely granted. Given allocation matrices, prove that the state is safe and find a Safe Sequence.
+
+Question 3: Memory & Page Replacement (10 marks)
+Given the page reference string: 1, 2, 3, 4, 2, 1, 5, 6, 2, 1, 2, 3.
+Calculate the number of page faults using:
+a) FIFO Replacement
+b) Least Recently Used (LRU) Replacement
+Assume 3 page frames are allocated. Explain the concept of Belady's Anomaly.

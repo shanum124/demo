@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: prepos
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: CLOUDINARY_KEY_NAME
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: AI_SERVICES_URL
+        sync: false
+      - key: AI_SERVICES_ENABLED
+        value: "true"
+      - key: ACCESS_TOKEN_SECRET
+        sync: false
+      - key: ACCESS_TOKEN_EXPIRY
+        value: 1d
+      - key: REFRESH_TOKEN_SECRET
+        sync: false
+      - key: REFRESH_TOKEN_EXPIRY
+        value: 10d
+      - key: CORS_ORIGIN
+        value: "*"

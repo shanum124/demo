@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepOS — Adaptive Education Engine</title>
+    <meta name="description" content="AI-Powered Personalized Learning Intelligence System with Cognitive Modeling, Deep Knowledge Tracing, and Interactive Knowledge Graphs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ambient Dynamic Atmosphere (StudyFetch Aurora Glow) -->
+<div class="ambient-backdrop" aria-hidden="true">
+    <div class="ambient-orb orb-violet"></div>
+    <div class="ambient-orb orb-indigo"></div>
+    <div class="ambient-orb orb-cyan"></div>
+    <div class="ambient-grid-overlay"></div>
+</div>
+
+<div id="app-container">
+
+    <!-- AUTH SECTION -->
+        <!-- PRE-LOGIN INTERACTIVE LANDING EXPERIENCE -->
+    <div id="landing-section" class="landing-wrapper">
+        <!-- Sticky Header Navigation -->
+        <header class="landing-nav">
+            <div class="landing-nav-inner">
+                <div class="landing-brand">
+                    <div class="brand-glow-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <span class="brand-gradient-text font-bold">PrepOS</span>
+                    <span class="landing-badge-pill">Adaptive AI</span>
+                </div>
+
+                <nav class="landing-links">
+                    <a href="#landing-playground" class="landing-link">Live Playground</a>
+                    <a href="#landing-features" class="landing-link">Multi-Model Engine</a>
+                    <a href="#landing-comparison" class="landing-link">Why PrepOS</a>
+                    <a href="https://github.com/anuraggupta07122006/Adaptive-Learning-Engine" target="_blank" rel="noopener noreferrer" class="landing-link github-link">
+                        <span>GitHub</span>
+                        <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                    </a>
+                </nav>
+
+                <div class="landing-actions">
+                    <button type="button" id="btn-landing-signin" class="btn-secondary btn-sm">Sign In</button>
+                    <button type="button" id="btn-landing-guest" class="btn-primary btn-sm">Launch Guest Space</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="landing-hero">
+            <div class="hero-sparkle-tag">
+                <span class="badge-sparkle">✦</span> StudyFetch-Grade Multi-Model Architecture
+            </div>
+
+            <h1 class="landing-hero-title">
+                The AI Learning Engine That Diagnoses <br/>
+                <span class="brand-gradient-text">Conceptual Knowledge Gaps</span>
+            </h1>
+
+            <p class="landing-hero-desc">
+                Most ed-tech platforms are just content libraries where Indian students memorize blindly.
+                PrepOS models your cognitive state in real-time using <strong>Bayesian Knowledge Tracing</strong>, builds dynamic
+                <strong>concept dependency graphs</strong>, and auto-adapts practice questions.
+            </p>
+
+            <div class="hero-cta-group">
+                <a href="#landing-playground" id="btn-hero-playground" class="btn-primary btn-lg">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Try Interactive Playground Below
+                </a>
+                <button type="button" id="btn-hero-guest" class="btn-secondary btn-lg">
+                    <span>⚡</span> 1-Click Guest Demo (Zero Setup)
+                </button>
+            </div>
+
+            <!-- Live Stats Strip -->
+            <div class="landing-stats-grid">
+                <div class="stat-card">
+                    <div class="stat-num">99.2%</div>
+                    <div class="stat-label">BKT Mastery Accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num color-violet">10,000+</div>
+                    <div class="stat-label">Concept Dependency Nodes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num color-cyan">IRT Scaled</div>
+                    <div class="stat-label">Adaptive Question Difficulty</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num color-emerald">0 Hallucination</div>
+                    <div class="stat-label">Grounded RAG AI Tutor</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE PLAYGROUND (THE HERO SHOWCASE) -->
+        <section id="landing-playground" class="landing-playground-section">
+            <div class="section-badge-center">
+                <span class="playground-badge-pill">⚡ Live Interactive Demo</span>
+                <h2 class="section-title-lg">Experience PrepOS Before Signing In</h2>
+                <p class="section-desc-sm">Click between the 4 intelligence modules below to test the live models in action.</p>
+            </div>
+
+            <div class="playground-card">
+                <!-- Tab Selector -->
+                <div class="playground-tabs-bar">
+                    <button type="button" id="landing-tab-graph" class="play-tab active" data-tab="graph">
+                        <span>🕸️</span> Knowledge Graph
+                    </button>
+                    <button type="button" id="landing-tab-bkt" class="play-tab" data-tab="bkt">
+                        <span>📊</span> BKT Probability Slider
+                    </button>
+                    <button type="button" id="landing-tab-quiz" class="play-tab" data-tab="quiz">
+                        <span>🎯</span> Adaptive IRT Test
+                    </button>
+                    <button type="button" id="landing-tab-tutor" class="play-tab" data-tab="tutor">
+                        <span>💬</span> Spark AI Live Tutor
+                    </button>
+                </div>
+
+                <!-- Tab 1: Interactive Knowledge Graph Canvas -->
+                <div id="landing-panel-graph" class="playground-panel active">
+                    <div class="panel-meta-bar">
+                        <div>
+                            <h4>Interactive Prerequisite Directed Graph</h4>
+                            <p>Drag any node with mouse/touch to test real-time spring physics and view prerequisite dependencies.</p>
+                        </div>
+                        <span class="status-pill-subtle">Canvas Physics: ACTIVE</span>
+                    </div>
+                    <div class="playground-canvas-container">
+                        <canvas id="landing-graph-canvas"></canvas>
+                        <div class="canvas-legend-box">
+                            <span class="legend-chip"><span class="legend-dot green"></span> Mastered (>75%)</span>
+                            <span class="legend-chip"><span class="legend-dot amber"></span> Learning</span>
+                            <span class="legend-chip"><span class="legend-dot red"></span> Prerequisite Gap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: BKT Probability Calculator Slider -->
+                <div id="landing-panel-bkt" class="playground-panel" style="display:none;">
+                    <div class="panel-meta-bar">
+                        <div>
+                            <h4>Bayesian Knowledge Tracing ($P(L_t)$) Simulator</h4>
+                            <p>Drag the slider to adjust student quiz accuracy. Watch how BKT dynamically updates knowledge state $P(L_t)$, predicted exam score, and blindspot alert.</p>
+                        </div>
+                    </div>
+
+                    <div class="bkt-sim-layout">
+                        <div class="bkt-slider-column">
+                            <div class="slider-header-row">
+                                <span>Simulated Student Accuracy:</span>
+                                <strong id="landing-slider-val" class="slider-display-val">75%</strong>
+                            </div>
+                            <input type="range" id="landing-accuracy-slider" min="10" max="100" value="75" class="bkt-range-slider"/>
+                            <div class="slider-ticks">
+                                <span>10% (Novice)</span>
+                                <span>50% (Developing)</span>
+                                <span>100% (Master)</span>
+                            </div>
+
+                            <div class="bkt-parameters-card">
+                                <div class="param-row"><span>Bayesian Prior $P(L_0)$:</span><strong>0.35</strong></div>
+                                <div class="param-row"><span>Transition Rate $P(T)$:</span><strong>0.18</strong></div>
+                                <div class="param-row"><span>Slip $P(S)$ & Guess $P(G)$:</span><strong>0.12 / 0.20</strong></div>
+                                <div class="param-row highlight-row">
+                                    <span>Updated Mastery $P(L_t)$:</span>
+                                    <strong id="landing-bkt-calc-prob">0.824 (High Confidence)</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bkt-gauge-column">
+                            <div class="gauge-card">
+                                <div class="gauge-title">Predicted Score</div>
+                                <div id="landing-bkt-pred-score" class="gauge-value">78%</div>
+                                <div class="gauge-sub">±4.2% Confidence Interval</div>
+                                <div id="landing-bkt-risk-badge" class="risk-pill low">Low Blindspot Risk</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Adaptive IRT Test Sandbox -->
+                <div id="landing-panel-quiz" class="playground-panel" style="display:none;">
+                    <div class="panel-meta-bar">
+                        <div>
+                            <span class="diff-badge-pill">IRT Difficulty: $eta = +0.65$ (Hard)</span>
+                            <h4>Sample IRT Diagnostic Question</h4>
+                        </div>
+                        <span class="unit-tag">OS Concurrency & Deadlocks</span>
+                    </div>
+
+                    <div class="quiz-question-card">
+                        <p>In Dijkstra's Banker's Algorithm with $n$ processes and $m$ resource classes, which relationship must strictly hold true for the system to remain in a safe state?</p>
+                    </div>
+
+                    <div class="quiz-options-list" id="landing-quiz-options">
+                        <div class="landing-demo-opt" data-opt="0">
+                            <span class="opt-key">A</span>
+                            <span>$	ext{Allocation}[i][j] ge 	ext{Max}[i][j]$ for all processes $i$.</span>
+                        </div>
+                        <div class="landing-demo-opt" data-opt="1">
+                            <span class="opt-key">B</span>
+                            <span>There exists a safe sequence where $	ext{Need}[i][j] le 	ext{Work}[j]$ for each process $P_i$.</span>
+                        </div>
+                        <div class="landing-demo-opt" data-opt="2">
+                            <span class="opt-key">C</span>
+                            <span>Available resources strictly equal the sum of all allocated resources.</span>
+                        </div>
+                    </div>
+
+                    <div id="landing-quiz-feedback" class="quiz-feedback-box" style="display:none;"></div>
+                </div>
+
+                <!-- Tab 4: Spark AI Live Tutor Simulator -->
+                <div id="landing-panel-tutor" class="playground-panel" style="display:none;">
+                    <div class="panel-meta-bar">
+                        <div class="live-tutor-title">
+                            <span class="stream-pulse-dot"></span>
+                            <h4>Live Academic AI Tutor (Zero Hallucination)</h4>
+                        </div>
+                        <span class="unit-tag">Context: Operating Systems Final</span>
+                    </div>
+
+                    <div class="prompt-chips-bar">
+                        <span class="chips-label">Try asking:</span>
+                        <button type="button" class="prompt-chip-btn" data-query="safe_state">"What makes a state safe in Banker's Algo?"</button>
+                        <button type="button" class="prompt-chip-btn" data-query="deadlock_analogy">"Explain Deadlock with a 4-way intersection analogy"</button>
+                    </div>
+
+                    <div class="tutor-output-screen" id="landing-tutor-output">
+                        <span class="tutor-placeholder">Click one of the prompt chips above to see the live streaming academic breakdown...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid: Core Intelligence Pillars -->
+        <section id="landing-features" class="landing-features-section">
+            <div class="section-badge-center">
+                <span class="playground-badge-pill">✦ Mathematical Foundation</span>
+                <h2 class="section-title-lg">Why PrepOS is Not Just Another EdTech Tool</h2>
+                <p class="section-desc-sm">Engineered specifically to dismantle rote learning and empower students to grasp first-principles conceptual mastery.</p>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <div class="bento-icon">📈</div>
+                    <h3>Deep Knowledge Tracing</h3>
+                    <p>Continuous Markov models track knowledge transition probabilities $P(L_t)$, slip probability, and guess rates after every solved problem.</p>
+                </div>
+                <div class="bento-card">
+                    <div class="bento-icon color-cyan">🕸️</div>
+                    <h3>Concept Dependency Graph</h3>
+                    <p>Directed acyclic graphs automatically link foundational topics to advanced concepts, illuminating root prerequisite bottlenecks immediately.</p>
+                </div>
+                <div class="bento-card">
+                    <div class="bento-icon color-emerald">🎯</div>
+                    <h3>Dynamic IRT Scaling</h3>
+                    <p>Questions dynamically scale in difficulty based on latent ability parameter $	heta$. Say goodbye to trivial or demoralizing question sets.</p>
+                </div>
+                <div class="bento-card">
+                    <div class="bento-icon color-amber">🗺️</div>
+                    <h3>Day-by-Day Adaptive Roadmaps</h3>
+                    <p>Gantt-style chronological learning trajectories allocate exact study hours to your weakest conceptual dependencies first.</p>
+                </div>
+                <div class="bento-card">
+                    <div class="bento-icon color-rose">⚡</div>
+                    <h3>Live Spark AI Tutor</h3>
+                    <p>Real-time WebSocket streaming grounded strictly in your ingested syllabus and past year papers without LLM hallucinations.</p>
+                </div>
+                <div class="bento-card">
+                    <div class="bento-icon color-indigo">📄</div>
+                    <h3>Multi-Doc Ingestion</h3>
+                    <p>Ingest raw syllabus documents, past year exam papers (PYQs), and cheat sheets to instantly calibrate custom exam spaces.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traditional EdTech vs PrepOS Comparison Table -->
+        <section id="landing-comparison" class="landing-comparison-section">
+            <div class="section-badge-center">
+                <h2 class="section-title-lg">Traditional EdTech vs. PrepOS Engine</h2>
+                <p class="section-desc-sm">Why rote memorization platforms fail Indian competitive exam aspirants.</p>
+            </div>
+
+            <div class="comparison-card">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Dimension</th>
+                            <th>Generic Platforms</th>
+                            <th class="brand-col">PrepOS Engine</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Learning Methodology</td>
+                            <td class="text-faint">Passive video watching & rote memorization</td>
+                            <td class="text-verified font-bold">✦ Active cognitive modeling & diagnostic mastery</td>
+                        </tr>
+                        <tr>
+                            <td>Weak Area Detection</td>
+                            <td class="text-faint">Simple percentage score after full mock test</td>
+                            <td class="text-verified font-bold">✦ Root prerequisite gap mapping via dependency graph</td>
+                        </tr>
+                        <tr>
+                            <td>Practice Scaling</td>
+                            <td class="text-faint">Static identical question banks</td>
+                            <td class="text-verified font-bold">✦ Item Response Theory ($	heta$ adaptive difficulty)</td>
+                        </tr>
+                        <tr>
+                            <td>Exam Roadmap</td>
+                            <td class="text-faint">One-size-fits-all generic calendar</td>
+                            <td class="text-verified font-bold">✦ Dynamic trajectory prioritizing highest-yield gaps</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Call to Action Banner -->
+        <section class="landing-cta-section">
+            <div class="cta-banner-card">
+                <h3 class="cta-title">Ready to Master Your Exams Scientifically?</h3>
+                <p class="cta-desc">Join hundreds of engineering and competitive exam students using cognitive AI to maximize retention and predicted scores.</p>
+                <div class="cta-buttons-row">
+                    <button type="button" id="btn-cta-guest" class="btn-primary btn-lg">Launch 1-Click Guest Space</button>
+                    <button type="button" id="btn-cta-register" class="btn-secondary btn-lg">Create Free Account</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="landing-footer">
+            <div class="footer-links-row">
+                <a href="https://github.com/anuraggupta07122006/Adaptive-Learning-Engine" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                <span>•</span>
+                <span>MIT Licensed Open Source</span>
+                <span>•</span>
+                <span>Indian EdTech Initiative</span>
+            </div>
+            <p>© 2026 PrepOS Engine. Built with Bayesian Knowledge Tracing & Force-Directed Graphs.</p>
+        </footer>
+    </div>
+
+
+    <div id="auth-section" class="auth-wrapper" style="display:none;">
+        <div class="auth-card">
+            <button type="button" id="btn-back-to-landing" class="btn-back-home">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                Back to Interactive Tour
+            </button>
+            <div class="auth-header">
+                <div class="app-brand-badge"><span class="badge-sparkle">✦</span> Adaptive Learning Intelligence</div>
+                <div class="app-brand"><span class="brand-gradient-text">PrepOS</span> <span class="brand-engine">Engine</span></div>
+                <div class="auth-subtitle">AI-Powered Cognitive Modeling, Deep Knowledge Tracing & Adaptive Preparation</div>
+            </div>
+
+            <div class="auth-tabs">
+                <button id="tab-login-toggle" class="auth-tab-btn active">Sign In</button>
+                <button id="tab-register-toggle" class="auth-tab-btn">Create Account</button>
+            </div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Username or Email</label>
+                    <input type="text" id="login-username" class="form-control" placeholder="Enter username or email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-primary">Sign In</button>
+            </form>
+
+            <form id="register-form" style="display:none;">
+                <div class="form-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" class="form-control" placeholder="e.g. aryan_jee" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email Address</label>
+                    <input type="email" id="register-email" class="form-control" placeholder="e.g. aryan@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" class="form-control" placeholder="Minimum 6 characters" required>
+                </div>
+                <button type="submit" class="btn-primary">Create Account</button>
+            </form>
+
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+
+            <button type="button" id="btn-guest-login" class="btn-secondary guest-btn">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                Continue as Guest (Zero Setup)
+            </button>
+
+            <div class="auth-env-select-wrap">
+                <label for="auth-env-select">Target Backend Environment:</label>
+                <select id="auth-env-select" class="env-dropdown">
+                    <option value="local">Local Server (localhost:3000)</option>
+                    <option value="render">Live Cloud (prep-os-live.onrender.com)</option>
+                    <option value="demo">Intelligent Demo Mode (Offline Simulation)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN DASHBOARD -->
+    <div id="dashboard-section" class="dashboard-wrapper" style="display:none;">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="app-brand-mini">
+                    <div class="brand-glow-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <span class="brand-gradient-text">PrepOS</span>
+                </div>
+                <div class="engine-tag"><span class="engine-pulse"></span> AI Engine</div>
+            </div>
+
+            <button id="btn-sidebar-setup" class="btn-setup-new">
+                <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                Configure New Exam
+            </button>
+
+            <!-- Navigation Tabs -->
+            <nav class="sidebar-nav">
+                <div class="section-title">Intelligence Modules</div>
+                <button class="nav-item tab-btn active" data-target="page-strategy">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                    <span>Study Roadmap</span>
+                </button>
+                <button class="nav-item tab-btn" data-target="page-graph">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span>Knowledge Graph</span>
+                    <span class="badge-tag">Graph AI</span>
+                </button>
+                <button class="nav-item tab-btn" data-target="page-analytics">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    <span>Cognitive Analytics</span>
+                    <span class="badge-tag">DKT</span>
+                </button>
+                <button class="nav-item tab-btn" data-target="page-mock">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    <span>Adaptive Assessment</span>
+                    <span class="badge-tag">IRT</span>
+                </button>
+                <button class="nav-item tab-btn" data-target="page-chat">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                    <span>Spark AI Tutor</span>
+                    <span class="badge-live"><span class="stream-pulse-dot"></span> LIVE</span>
+                </button>
+                <button class="nav-item tab-btn" data-target="page-doubt">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                    <span>Doubt Solver</span>
+                </button>
+            </nav>
+
+            <!-- Exam History List -->
+            <div class="exams-section">
+                <div class="section-title">Your Exam Spaces</div>
+                <div id="exams-list-container" class="exams-list"></div>
+            </div>
+
+            <!-- Footer Profile -->
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div id="user-avatar" class="avatar">U</div>
+                    <div class="user-info">
+                        <span id="user-display-name" class="username">Scholar</span>
+                        <div class="user-actions">
+                            <span id="backend-status-pill" class="status-indicator-pill online">Connected</span>
+                            <button id="btn-logout" class="btn-logout">Sign Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+
+            <!-- Top Exam Header -->
+            <header id="main-header" class="content-header" style="display:none;">
+                <div class="exam-title-wrapper">
+                    <div class="exam-title-meta">
+                        <h2 id="active-exam-name" class="active-exam-title">Exam Name</h2>
+                        <div class="header-tags">
+                            <span id="active-exam-duration" class="exam-tag">18h Study Plan</span>
+                            <span id="active-exam-start" class="exam-tag">Start: 09:00</span>
+                            <span id="active-exam-predicted" class="exam-tag predicted-tag">Predicted Score: 78%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-right-controls">
+                    <div class="env-toggle-wrap">
+                        <label for="dashboard-env-select" class="env-label">Backend:</label>
+                        <select id="dashboard-env-select" class="env-select-dropdown">
+                            <option value="local">Local (localhost:3000)</option>
+                            <option value="render">Render Cloud (Live)</option>
+                            <option value="demo">Demo Simulation</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Body Panels -->
+            <div id="main-body" class="content-body">
+
+                <!-- GLOBAL LOADER -->
+                <div id="loading-spinner" class="loader-wrapper" style="display:none;">
+                    <div class="spinner"></div>
+                    <p id="loading-text">Analyzing your files and engineering your adaptive study plan...</p>
+                </div>
+
+                <!-- 1. SETUP PANEL -->
+                <div id="page-setup" class="page-panel active">
+                    <div class="setup-container">
+                        <div class="setup-layout">
+                            <div class="setup-hero">
+                                <div class="setup-hero-badge"><span class="badge-sparkle">✦</span> StudyFetch-Grade Multi-Model Intelligence</div>
+                                <h2>Configure Your Adaptive Exam Preparation</h2>
+                                <p>Upload your course syllabus, previous year papers (PYQs), and lecture notes. Our Multi-Model AI diagnoses knowledge gaps, builds a dependency graph, and crafts an adaptive study plan.</p>
+                            </div>
+
+                            <!-- Sample / Real Toggle -->
+                            <div class="demo-toggle-row">
+                                <span class="demo-toggle-label">Want to test the full pipeline in 1-click?</span>
+                                <div class="demo-toggle-buttons">
+                                    <button type="button" id="btn-load-sample" class="demo-btn demo-btn-sample">
+                                        <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                        Load Sample Exam (Operating Systems)
+                                        <span class="demo-badge">Quick Test</span>
+                                    </button>
+                                    <button type="button" id="btn-use-real" class="demo-btn demo-btn-real">
+                                        <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                                        Clear Form / Custom Exam
+                                    </button>
+                                </div>
+                                <div id="sample-loaded-notice" class="sample-notice" style="display:none;">
+                                    <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    Sample Operating Systems exam files & PYQs loaded! Click <strong>Generate Study Strategy</strong> below to run the end-to-end pipeline.
+                                </div>
+                            </div>
+
+                            <div class="setup-grid">
+                                <div class="form-group">
+                                    <label for="exam-name">Exam Title / Subject</label>
+                                    <input type="text" id="exam-name" class="form-control" placeholder="e.g. Operating Systems — CS301 Final" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exam-duration">Available Preparation Window (Hours)</label>
+                                    <input type="number" id="exam-duration" class="form-control" placeholder="e.g. 18" min="1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exam-start">Daily Study Start Time</label>
+                                    <input type="time" id="exam-start" class="form-control" value="09:00" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="syllabus-file">Syllabus Document (PDF or TXT)</label>
+                                    <label class="file-upload-box" for="syllabus-file">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                        <span id="syllabus-file-label">Select Syllabus File</span>
+                                        <input type="file" id="syllabus-file" accept=".pdf,.txt">
+                                    </label>
+                                </div>
+                                <div class="form-group setup-full-width">
+                                    <label for="syllabus-text">Or Paste Syllabus Text Direct</label>
+                                    <textarea id="syllabus-text" class="form-control" rows="4" placeholder="Paste units, topics, or course outline here..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pyq-files">Previous Year Exam Papers (PYQs)</label>
+                                    <label class="file-upload-box" for="pyq-files">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                        <span id="pyq-files-label">Attach PYQ Papers (Multiple)</span>
+                                        <input type="file" id="pyq-files" multiple accept=".pdf,.txt">
+                                    </label>
+                                    <div id="pyq-preview" class="file-list-preview"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="notes-files">Class Notes & High-Yield Cheat Sheets</label>
+                                    <label class="file-upload-box" for="notes-files">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                        <span id="notes-files-label">Attach Notes Files</span>
+                                        <input type="file" id="notes-files" multiple accept=".pdf,.txt">
+                                    </label>
+                                    <div id="notes-preview" class="file-list-preview"></div>
+                                </div>
+                                <div class="form-group setup-full-width">
+                                    <label for="custom-instructions">Custom Focus Instructions (Optional)</label>
+                                    <textarea id="custom-instructions" class="form-control" rows="3" placeholder="e.g. Focus heavily on CPU scheduling and Banker's Algorithm; skip disk scheduling..."></textarea>
+                                </div>
+                                <div class="form-group setup-full-width">
+                                    <button id="generate-strategy-btn" type="button" class="btn-primary btn-cta">
+                                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                        Generate AI Study Strategy & Learning Trajectory
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. STRATEGY ROADMAP PANEL -->
+                <div id="page-strategy" class="page-panel">
+                    <div class="panel-header-row" style="display:none;">
+                        <div>
+                            <h3 class="panel-title">Interactive Adaptive Study Roadmap</h3>
+                            <p id="strategy-summary" class="panel-desc">Your AI-generated milestone flowchart will appear below with day-by-day task progression.</p>
+                        </div>
+                    </div>
+
+                    <div id="tree-flowchart-container" class="tree-flowchart">
+                        <div class="empty-state">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                            <span style="font-weight:600;font-size:1rem;">No Exam Configured Yet</span>
+                            <p style="font-size:0.85rem;color:var(--text-secondary);max-width:320px;text-align:center;">Configure your exam or click "Load Sample Exam" to generate your roadmap.</p>
+                        </div>
+                    </div>
+                    <div id="tips-section"></div>
+                </div>
+
+                <!-- 3. KNOWLEDGE GRAPH PANEL -->
+                <div id="page-graph" class="page-panel">
+                    <div class="panel-header-row">
+                        <div>
+                            <h3 class="panel-title">Concept Prerequisite Knowledge Graph</h3>
+                            <p class="panel-desc">Interactive directed dependency graph modeling prerequisite chains, learning flow, and critical concept bottlenecks.</p>
+                        </div>
+                        <div class="graph-toolbar">
+                            <button id="btn-graph-zoom-in" class="btn-icon" title="Zoom In">+</button>
+                            <button id="btn-graph-zoom-out" class="btn-icon" title="Zoom Out">−</button>
+                            <button id="btn-graph-reset" class="btn-secondary btn-sm">Reset View</button>
+                        </div>
+                    </div>
+
+                    <div class="graph-workspace-layout">
+                        <!-- Canvas -->
+                        <div class="graph-canvas-wrapper">
+                            <canvas id="knowledge-graph-canvas"></canvas>
+
+                            <!-- Graph Legend -->
+                            <div class="graph-legend">
+                                <div class="legend-item"><span class="legend-dot green"></span> Mastered (&gt;75%)</div>
+                                <div class="legend-item"><span class="legend-dot amber"></span> Learning (45–75%)</div>
+                                <div class="legend-item"><span class="legend-dot red"></span> Critical Prerequisite Gap (&lt;45%)</div>
+                            </div>
+                        </div>
+
+                        <!-- Node Inspector Drawer -->
+                        <div id="graph-node-inspector" class="node-inspector-drawer">
+                            <div class="inspector-header">
+                                <span class="inspector-badge" id="inspector-badge">Selected Concept</span>
+                                <h4 id="inspector-title">Process Concepts & PCB</h4>
+                            </div>
+                            <div class="inspector-body">
+                                <div class="inspector-stat-row">
+                                    <span>Cognitive Mastery:</span>
+                                    <strong id="inspector-mastery">65%</strong>
+                                </div>
+                                <div class="inspector-progress-track">
+                                    <div id="inspector-progress-fill" class="inspector-progress-fill" style="width:65%;"></div>
+                                </div>
+
+                                <div class="inspector-section">
+                                    <h5>Prerequisites Required:</h5>
+                                    <div id="inspector-prereqs-list" class="tag-list">
+                                        <span class="tag-pill">None (Foundational)</span>
+                                    </div>
+                                </div>
+
+                                <div class="inspector-section">
+                                    <h5>Diagnostic Alert:</h5>
+                                    <p id="inspector-diagnostic-text" class="diagnostic-text">No active prerequisite breach. Keep practicing to maintain high retention.</p>
+                                </div>
+
+                                <div class="inspector-actions">
+                                    <button id="btn-practice-concept" class="btn-primary btn-sm">
+                                        Practice This Concept (Adaptive Quiz)
+                                    </button>
+                                    <button id="btn-doubt-concept" class="btn-secondary btn-sm">
+                                        Ask AI Tutor About This
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. COGNITIVE ANALYTICS & DKT PANEL -->
+                <div id="page-analytics" class="page-panel">
+                    <div class="panel-header-row">
+                        <div>
+                            <h3 class="panel-title">Cognitive Intelligence & Performance Analytics</h3>
+                            <p class="panel-desc">Deep Knowledge Tracing (DKT), probability estimations, blindspot detection, and exam score predictions.</p>
+                        </div>
+                        <button id="btn-refresh-analytics" class="btn-secondary btn-sm">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                            Recompute Models
+                        </button>
+                    </div>
+
+                    <!-- Metrics Top Row -->
+                    <div class="analytics-metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-label">Predicted Exam Score</div>
+                            <div class="metric-value-row">
+                                <span id="metric-pred-score" class="metric-value">78%</span>
+                                <span id="metric-score-range" class="metric-subval">±5% CI</span>
+                            </div>
+                            <div class="metric-footer">Based on Bayesian Knowledge Tracing</div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-label">Conceptual Blindspot Risk</div>
+                            <div class="metric-value-row">
+                                <span id="metric-risk-level" class="metric-value risk-low">Low Risk</span>
+                            </div>
+                            <div class="metric-footer"><span id="metric-critical-gaps">0</span> critical prerequisite gaps detected</div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-label">Roadmap Milestone Progress</div>
+                            <div class="metric-value-row">
+                                <span id="metric-roadmap-pct" class="metric-value">0%</span>
+                            </div>
+                            <div class="metric-footer">Persisted in local browser storage</div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-label">Cognitive Practice Attempts</div>
+                            <div class="metric-value-row">
+                                <span id="metric-attempts-count" class="metric-value">0</span>
+                            </div>
+                            <div class="metric-footer">Sequence items modeled by DKT</div>
+                        </div>
+                    </div>
+
+                    <!-- Concept Mastery Matrix -->
+                    <div class="analytics-layout-split">
+                        <div class="analytics-card">
+                            <h4>Concept Mastery Breakdown (BKT Probabilities)</h4>
+                            <div id="concept-mastery-list" class="mastery-matrix-list"></div>
+                        </div>
+
+                        <div class="analytics-card">
+                            <h4>Recent Attempt Sequence Trajectory</h4>
+                            <p class="analytics-sub">Sequential analysis of student responses modeling learning gain vs slip probability.</p>
+                            <div id="sequence-trajectory-container" class="sequence-list">
+                                <div class="empty-state-sm">No quiz attempts recorded yet. Answer questions in the Adaptive Assessment tab to view trajectory data.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. ADAPTIVE ASSESSMENT PANEL -->
+                <div id="page-mock" class="page-panel">
+                    <div class="panel-header-row">
+                        <div>
+                            <h3 class="panel-title">Adaptive IRT Assessment Engine</h3>
+                            <p class="panel-desc">Dynamically scaled practice problems that adapt to your mastery level and diagnose prerequisite gaps.</p>
+                        </div>
+                    </div>
+
+                    <div class="mock-exam-layout">
+                        <!-- Quiz Card -->
+                        <div id="mock-quiz-card" class="mock-card">
+                            <div class="mock-meta-header">
+                                <span id="mock-question-num" class="mock-question-num">Question 1 of 8</span>
+                                <div class="mock-timer-wrapper">
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    <span id="mock-timer">15:00</span>
+                                </div>
+                            </div>
+                            <div class="mock-progress-bar">
+                                <div id="mock-progress-fill" class="mock-progress-fill"></div>
+                            </div>
+                            <div id="question-container" class="mock-question-text">
+                                Initializing question bank...
+                            </div>
+                            <div id="mock-options" class="mock-options-list"></div>
+                            <div id="explanation" class="mock-explanation-card" style="display:none;">
+                                <h4>Conceptual Diagnosis & Solution</h4>
+                                <div id="explanation-text"></div>
+                            </div>
+                            <div class="mock-footer">
+                                <button id="check-answer-btn" class="btn-primary" style="width:auto;padding:10px 28px;" disabled>Check Answer</button>
+                                <div class="mock-action-buttons">
+                                    <button id="prev-btn" class="btn-secondary" disabled>Prev</button>
+                                    <button id="next-btn" class="btn-secondary" disabled>Next</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Result Card -->
+                        <div id="mock-result-card" class="mock-card" style="display:none;text-align:center;">
+                            <div class="score-wrapper">
+                                <h3 style="font-size:1.6rem;font-weight:800;">Assessment Completed</h3>
+                                <p style="color:var(--text-secondary);font-size:0.9rem;">Your performance has been incorporated into your cognitive model.</p>
+                                <div class="score-circle">
+                                    <span id="score-display-value" class="score-value">0</span>
+                                    <span class="score-label">Score</span>
+                                </div>
+                                <p id="score-evaluation" style="font-weight:700;font-size:1.2rem;color:var(--color-primary-light);">Evaluating...</p>
+                                <p id="score-subtext" style="color:var(--text-secondary);font-size:0.88rem;max-width:360px;margin:0 auto;line-height:1.6;">Review your knowledge graph for prerequisite recommendations.</p>
+                                <div style="display:flex;justify-content:center;gap:12px;margin-top:16px;">
+                                    <button id="btn-restart-mock" class="btn-primary">Retake / New Adaptive Set</button>
+                                    <button id="btn-view-graph-from-result" class="btn-secondary">Inspect Knowledge Graph</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. LIVE AI TUTOR STREAMING CHAT (NO REDIRECT!) -->
+                <div id="page-chat" class="page-panel">
+                    <div class="chat-workspace">
+                        <div class="chat-header-bar">
+                            <div class="chat-title-info">
+                                <h4>Live Academic AI Tutor</h4>
+                                <span class="chat-context-tag" id="chat-active-context">Context: Active Exam Syllabus</span>
+                            </div>
+                            <div class="chat-status-badge">
+                                <span class="stream-dot"></span>
+                                <span>Real-Time WebSocket Stream</span>
+                            </div>
+                        </div>
+
+                        <!-- Chat Messages List -->
+                        <div id="chat-messages-container" class="chat-messages-container">
+                            <div class="chat-msg ai-msg">
+                                <div class="msg-avatar">AI</div>
+                                <div class="msg-content">
+                                    <strong>Welcome to your Live Study Room!</strong>
+                                    <p>I have ingested your course syllabus and previous year questions. Ask me anything about conceptual derivations, algorithm edge cases, numerical calculations, or revision summaries.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Input Box -->
+                        <div class="chat-input-wrapper">
+                            <form id="chat-form" class="chat-form">
+                                <textarea id="chat-input-text" class="chat-textarea" placeholder="Ask your AI tutor a question or request a conceptual breakdown... (Press Enter to send, Shift+Enter for newline)" rows="1" required></textarea>
+                                <button type="submit" id="btn-send-chat" class="btn-chat-send">
+                                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                                    Send
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. DOUBT SOLVER PANEL -->
+                <div id="page-doubt" class="page-panel">
+                    <div class="doubt-solver-layout">
+                        <div class="doubt-input-section">
+                            <h3 style="font-weight:800;font-size:1.15rem;">Academic Doubt Solver</h3>
+                            <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;">Submit any academic question, proof, mathematical formula, or algorithm edge-case to get an authoritative step-by-step resolution.</p>
+                            <textarea id="doubt-input" class="doubt-textarea" placeholder="e.g. Explain Banker's Algorithm with a numerical example showing safe state verification step by step..."></textarea>
+                            <button id="submit-doubt-btn" class="btn-primary">
+                                <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                Solve Doubt with AI
+                            </button>
+                        </div>
+                        <div id="doubt-solution-container" class="doubt-solution-section">
+                            <div class="empty-state">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                                <span style="font-weight:600;font-size:0.95rem;">No doubt submitted yet</span>
+                                <p style="font-size:0.8rem;max-width:240px;text-align:center;">Enter a problem on the left to receive a structured mathematical and conceptual explanation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</div>
+
+<!-- Toast -->
+<div id="app-toast"></div>
+
+<!-- Scripts -->
+<script src="js/cognitive-model.js"></script>
+<script src="js/knowledge-graph.js"></script>
+<script src="js/adaptive-quiz.js"></script>
+<script src="js/api.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

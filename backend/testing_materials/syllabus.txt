@@ -1,0 +1,21 @@
+Operating Systems Course Syllabus (CS-302)
+
+Unit 1: Process Management
+- Process concepts, state transitions, Process Control Block (PCB).
+- CPU Scheduling: FCFS, SJF, SRTF, Round Robin, Priority Scheduling, Multi-level Queue.
+- Process Synchronization: Critical Section Problem, Semaphores, Monitors, Classical problems (Producer-Consumer, Readers-Writers, Dining Philosophers).
+
+Unit 2: Deadlocks
+- Deadlock characterization, Resource Allocation Graph.
+- Deadlock Prevention, Avoidance (Banker's Algorithm).
+- Deadlock Detection and Recovery.
+
+Unit 3: Memory Management
+- Logical vs. Physical Address Space.
+- Swapping, Contiguous Memory Allocation, Paging, Segmentation.
+- Virtual Memory: Demand Paging, Page Replacement Algorithms (FIFO, Optimal, LRU, LFU, MFU), Thrashing.
+
+Unit 4: Storage & File Systems
+- Disk Structure, Disk Scheduling Algorithms (FCFS, SSTF, SCAN, C-SCAN, LOOK, C-LOOK).
+- File Concept, Access Methods, Directory Structure, File System Mounting.
+- Allocation Methods: Contiguous, Linked, Indexed. Free Space Management.

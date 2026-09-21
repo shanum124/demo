@@ -1,0 +1,178 @@
+================================================================================
+DRAW.IO MERMAID CODES — PrepOS ARCHITECTURE FIGURES (LARGE FONTS & STYLED)
+================================================================================
+How to use in draw.io (app.diagrams.net):
+1. Open draw.io (https://app.diagrams.net)
+2. Click: Arrange -> Insert -> Advanced -> Mermaid
+3. Copy and paste any code block below and click "Insert"!
+================================================================================
+
+
+--------------------------------------------------------------------------------
+FIGURE 1: SYSTEM ARCHITECTURE DIAGRAM (LARGE FONT & STYLED)
+--------------------------------------------------------------------------------
+%%{init: { 'theme': 'base', 'themeVariables': { 'fontSize': '16px', 'fontFamily': 'Arial, sans-serif' } } }%%
+graph TD
+    subgraph Client ["Client Layer — Browser"]
+        UI["Single Page Web App<br/>(HTML5 / CSS / JS)"]
+        LocalStorage["Browser Storage<br/>(localStorage / sessionStorage)"]
+        SocketClient["Socket.IO Client<br/>(Real-Time Gateway)"]
+    end
+
+    subgraph API ["Server & Processing Layer"]
+        Server["Express HTTP Server"]
+        SocketServer["Socket.IO Real-Time Gateway"]
+        AuthMW["JWT Auth Middleware & Guest Handler"]
+        Multer["Multer File Upload Middleware"]
+        PDFParser["PDF & Text Extractor"]
+    end
+
+    subgraph Data ["Database & Media Storage"]
+        MongoDB["MongoDB Atlas<br/>(Database)"]
+        Cloudinary["Cloudinary Storage<br/>(Media Files)"]
+    end
+
+    subgraph AI ["AI Services"]
+        Groq["Groq SDK<br/>(Llama 3.3 70B Engine)"]
+    end
+
+    UI -->|"HTTP REST Requests"| Server
+    UI -->|"WebSocket Events"| SocketServer
+    UI -->|"Persists Checkbox Progress"| LocalStorage
+
+    Server --> AuthMW
+    Server --> Multer
+    Multer --> Cloudinary
+    Multer --> PDFParser
+
+    Server -->|"Read and Write Documents"| MongoDB
+    SocketServer -->|"Fetch History and Save Messages"| MongoDB
+
+    PDFParser -->|"Parsed Syllabus and Notes Text"| Server
+    Server -->|"Strategy, Doubt, and Mock Prompts"| Groq
+    SocketServer -->|"Token Streaming Response"| Groq
+
+    style UI fill:#e0e7ff,stroke:#4f46e5,stroke-width:2px,font-size:16px,font-weight:bold;
+    style LocalStorage fill:#f1f5f9,stroke:#64748b,stroke-width:2px,font-size:15px;
+    style SocketClient fill:#e0e7ff,stroke:#4f46e5,stroke-width:2px,font-size:15px;
+    style Server fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,font-size:16px,font-weight:bold;
+    style SocketServer fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,font-size:15px;
+    style AuthMW fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,font-size:15px;
+    style Multer fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,font-size:15px;
+    style PDFParser fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,font-size:15px;
+    style MongoDB fill:#fff7ed,stroke:#ea580c,stroke-width:2px,font-size:16px,font-weight:bold;
+    style Cloudinary fill:#fff7ed,stroke:#ea580c,stroke-width:2px,font-size:15px;
+    style Groq fill:#faf5ff,stroke:#9333ea,stroke-width:2px,font-size:16px,font-weight:bold;
+
+
+--------------------------------------------------------------------------------
+FIGURE 2: USER AUTHENTICATION & GUEST LOGIN FLOW
+--------------------------------------------------------------------------------
+%%{init: { 'theme': 'base', 'themeVariables': { 'fontSize': '15px' } } }%%
+sequenceDiagram
+    autonumber
+    actor User as User / Student
+    participant Client as Web Browser
+    participant API as Express Auth API
+    participant DB as MongoDB Atlas
+
+    alt Guest Login
+        User->>Client: Clicks "Continue as Guest"
+        Client->>API: POST /api/v1/users/guest-login
+        API->>DB: Find or create guest user record
+        DB-->>API: Guest User Document
+        API->>API: Sign Access Token and Refresh Token
+        API-->>Client: HTTP 200 OK + JWT Tokens
+        Client->>Client: Save Access Token in sessionStorage
+        Client->>User: Redirect to Exam Dashboard
+    else Standard Account Login
+        User->>Client: Submits Username & Password
+        Client->>API: POST /api/v1/users/login
+        API->>DB: Query User by Username or Email
+        DB-->>API: User Document + Hashed Password
+        API->>API: Verify Password Hash
+        API->>API: Sign Access Token & Refresh Token
+        API-->>Client: HTTP 200 OK + Cookies & Tokens
+        Client->>User: Display Authenticated Dashboard
+    end
+
+
+--------------------------------------------------------------------------------
+FIGURE 3: EXAM SETUP & STRATEGY FLOWCHART GENERATION PIPELINE
+--------------------------------------------------------------------------------
+%%{init: { 'theme': 'base', 'themeVariables': { 'fontSize': '15px' } } }%%
+sequenceDiagram
+    autonumber
+    actor Student as Student
+    participant Client as Frontend Script
+    participant API as Exam Setup Endpoint
+    participant PDF as PDF/Text Parser
+    participant Cloud as Cloudinary Storage
+    participant Groq as Groq AI Engine
+    participant DB as MongoDB Atlas
+
+    Student->>Client: Fills form OR clicks Load Sample Exam
+    Client->>Client: Attach files via DataTransfer API
+    Client->>API: POST /api/v1/exams/setup
+    API->>Cloud: Upload PDF and Text attachments
+    Cloud-->>API: File URLs
+    API->>PDF: Extract text content from syllabus and PYQs
+    PDF-->>API: Extracted raw syllabus text
+    API->>Groq: Query generateStudyStrategy
+    Groq-->>API: Returns JSON Plan
+    API->>DB: Save Exam Document with strategy JSON
+    DB-->>API: Saved Exam Object
+    API-->>Client: HTTP 201 Created
+    Client->>Client: Render Interactive Tree Flowchart
+    Student->>Client: Check off completed daily tasks
+    Client->>Client: Persist checkbox state to localStorage
+
+
+--------------------------------------------------------------------------------
+FIGURE 4: REAL-TIME Q&A CHAT STREAMING WORKFLOW
+--------------------------------------------------------------------------------
+%%{init: { 'theme': 'base', 'themeVariables': { 'fontSize': '15px' } } }%%
+sequenceDiagram
+    autonumber
+    actor Student as Student
+    participant UI as Chat Panel UI
+    participant Gateway as Socket.IO Gateway
+    participant DB as MongoDB Chat Collection
+    participant Groq as Groq Streaming Engine
+
+    Student->>UI: Types question and hits Send
+    UI->>Gateway: emit send-message
+    Gateway->>DB: Save user chat message
+    Gateway-->>UI: emit chat-message-saved
+    Gateway-->>UI: emit chat-stream-start
+    Gateway->>Groq: Request text stream
+    loop Token Streaming
+        Groq-->>Gateway: Yield text chunk
+        Gateway-->>UI: emit chat-stream-chunk
+        UI->>UI: Append chunk and format Markdown
+    end
+    Gateway->>DB: Save complete AI model response
+    Gateway-->>UI: emit chat-stream-end
+
+
+--------------------------------------------------------------------------------
+FIGURE 5: MOCK EXAM ENGINE STATE MACHINE
+--------------------------------------------------------------------------------
+%%{init: { 'theme': 'base', 'themeVariables': { 'fontSize': '15px' } } }%%
+stateDiagram-v2
+    [*] --> Idle: Tab Activated
+    Idle --> Loading: Fetch or Generate Mock Exam
+    Loading --> ActiveQuiz: Load Questions and Start Timer
+
+    state ActiveQuiz {
+        [*] --> QuestionView
+        QuestionView --> OptionSelected: Click Option Card
+        OptionSelected --> AnswerChecked: Click Check Answer
+        AnswerChecked --> ViewExplanation: Show Explanation Card
+        ViewExplanation --> NextQuestion: Click Next
+        NextQuestion --> QuestionView
+    }
+
+    ActiveQuiz --> QuizSubmitted: Click Submit OR Timer Expires
+    QuizSubmitted --> ScoreCard: Calculate Score and Save to DB
+    ScoreCard --> ActiveQuiz: Click Restart Quiz
