@@ -1,0 +1,47 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!backend/.env.example
+
+# JavaScript dependencies
+node_modules/
+backend/node_modules/
+
+# Python environments and bytecode
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local databases, vector stores, and generated runtime data
+data/
+*.sqlite3
+*.db
+qdrant/
+qdrant-*/
+
+# Temporary uploads and downloads
+backend/server/public/temp/
+*.part
+
+# Build, test, and tool caches
+build/
+dist/
+coverage/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db
